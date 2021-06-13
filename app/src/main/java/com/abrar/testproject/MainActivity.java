@@ -15,17 +15,13 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private ExampleAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    //private Button buttonInsert;
-    //private Button buttonRemove;
-    // private EditText editTextInsert;
-    //private EditText editTextRemove;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         createExampleList();
         buildRecyclerView();
-       // setButtons();
     }
    public void insertItem(int position) {
         mExampleList.add(position, new ExampleItem(R.drawable.ic_android, "New Item At Position" + position, "This is Line 2"));
@@ -69,24 +65,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    //public void setButtons() {
-       // buttonInsert = findViewById(R.id.button_insert);
-      //  buttonRemove = findViewById(R.id.button_remove);
-      //  editTextInsert = findViewById(R.id.edittext_insert);
-       // editTextRemove = findViewById(R.id.edittext_remove);
-      //  buttonInsert.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-         //   public void onClick(View v) {
-       //         int position = Integer.parseInt(editTextInsert.getText().toString());
-        //        insertItem(position);
-      //      }
-      //  });
-       // buttonRemove.setOnClickListener(new View.OnClickListener() {
-       //     @Override
-     //       public void onClick(View v) {
-      //          int position = Integer.parseInt(editTextRemove.getText().toString());
-      //          removeItem(position);
-      //      }
-     //   });
-  //  }
+
 }
